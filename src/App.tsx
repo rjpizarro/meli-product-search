@@ -1,9 +1,11 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom'
 
 // COMPONENTS
 import Header from './components/header/header'
 import Input from './components/input'
 import { SearchIcon } from './components/icons'
+import ItemsContainer from './containers/items'
 
 function App() {
     return (
@@ -14,6 +16,9 @@ function App() {
                     endAdornment={<SearchIcon />}
                 />
             </Header>
+            <Switch>
+                <Route path="/items" component={ItemsContainer} />
+            </Switch>
         </div>
     );
 }
