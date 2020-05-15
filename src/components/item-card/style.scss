@@ -1,0 +1,57 @@
+@import "../../globals";
+
+.item-card {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+
+  &__picture-container {
+    flex: 2
+  }
+
+  &__picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    background-size: 180px 180px;
+  }
+
+  &__picture-img {
+    display: none;
+  }
+
+  &__details-container {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 16px;
+  }
+
+  &__location-container {
+    flex: 2;
+    text-align: left;
+  }
+
+  &__price-details {
+    display: flex;
+    align-items: center;
+  }
+
+  &__shipping-icon {
+    margin-left: 8px;
+  }
+
+  &__title {
+    margin-top: 32px;
+    font-size: 18px;
+    font-weight: normal;
+    max-width: 60%;
+    text-align: left;
+  }
+
+  &__location {
+    font-size: 12px;
+  }
+}

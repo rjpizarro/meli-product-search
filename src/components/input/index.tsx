@@ -25,9 +25,9 @@ const Input = (props: IInputProps) => {
     return (
         <div className="input">
             <input
+                {...htmlInputProps}
                 className={getInputClasses(Boolean(endAdornment))}
                 placeholder={label}
-                {...htmlInputProps}
             />
             { endAdornment && <div className="input__end-adornment">{ endAdornment }</div>}
         </div>

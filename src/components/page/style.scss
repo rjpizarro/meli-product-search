@@ -1,0 +1,11 @@
+@import "../../globals";
+
+.page {
+  padding: 16px;
+
+  &__content {
+    background-color: $pure-white;
+    border-radius: 3px;
+    padding: 16px;
+  }
+}
