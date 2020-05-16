@@ -8,15 +8,20 @@ import endpoints from '../../config/endpoints'
 
 // COMPONENTS
 import ItemPageDetails from './components/item-page-details'
+import Spinner from '../../components/spinner'
 
 const ItemDetails = () => {
     const { id } = useParams()
-    const { data } = useMakeRequest(
+    const { data, isLoading } = useMakeRequest(
         `${endpoints.items.get}/${id}`,
         'get',
     )
 
     const item = get(data, 'item')
+
+    if (isLoading) {
+        return <Spinner />
+    }
 
     if (item) {
         return (

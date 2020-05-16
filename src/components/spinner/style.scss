@@ -1,0 +1,25 @@
+@import "../../globals";
+
+$background: rgba(153, 153, 153, 0.2);
+
+.spinner {
+  margin: 60px auto;
+  font-size: 7px;
+  border-top: 7px solid $background;
+  border-right: 7px solid $background;
+  border-bottom: 7px solid $background;
+  border-left: 7px solid $gray-lighter;
+  animation: spin 0.9s infinite linear;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
