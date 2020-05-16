@@ -1,9 +1,14 @@
 import React, {useEffect} from 'react'
 import get from 'lodash/get'
 import { useLocation, useHistory } from 'react-router'
-import ItemResultsList from '../../components/item-results-list'
+
+// LIBS
 import useMakeRequest from '../../libs/make-request'
 import endpoints from '../../config/endpoints'
+
+// COMPONENTS
+import ItemResultsList from '../../components/item-results-list'
+import Page from '../../components/page'
 
 function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -26,9 +31,9 @@ const ItemSearch = () => {
     const items = get(data, 'items', [])
 
     return (
-        <div>
+        <Page>
             <ItemResultsList results={items} onItemClick={(id) => history.push(`items/${id}`)} />
-        </div>
+        </Page>
     )
 }
 

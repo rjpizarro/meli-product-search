@@ -6,32 +6,31 @@ import './style.scss'
 export type ItemCardProps = {
     picture: string
     title: string
-    freeShipping: boolean
+    free_shipping: boolean
     location: string
     onCardClick?: () => void
     price: {
-        amount: string,
-        decimals?: string
+        amount: number,
+        decimals?: number
     }
 }
 
 const ItemCard = (props: ItemCardProps) => {
-    const { picture, title, freeShipping, location, price } = props
+    const { picture, title, free_shipping, location, price } = props
 
     return (
         <div className="item-card">
             <div className="item-card__picture-container">
-                <div className="item-card__picture" style={{backgroundImage: `url(${picture})`}} />
                 <img
-                    className="item-card__picture-img"
+                    className="item-card__picture"
                     src={picture}
                     alt={`${title}`}
                 />
             </div>
             <div className="item-card__details-container">
                 <div className="item-card__price-details">
-                    <PriceLabel amount={price.amount} decimals={price.decimals} />
-                    {freeShipping &&
+                    <PriceLabel amount={price.amount} />
+                    {free_shipping &&
                       <span className="item-card__shipping-icon">
                           <ShippingIcon />
                       </span>

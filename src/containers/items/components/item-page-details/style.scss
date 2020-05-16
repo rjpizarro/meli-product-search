@@ -1,0 +1,47 @@
+@import "../../../../globals";
+
+.item-page-details {
+
+  &__resume-container {
+    padding-top: 16px;
+  }
+
+  &__picture {
+    max-height: 350px;
+  }
+
+  &__resume {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title.text {
+    margin: 16px 0 0 0;
+    text-align: left;
+    width: 80%;
+    line-height: 24px;
+  }
+
+  &__price {
+    margin: 32px 0;
+  }
+
+  &__buy-button-container {
+    width: calc(100% - 16px);
+  }
+
+  &__description-container {
+    padding-left: 14px;
+    text-align: left;
+  }
+
+  &__description-title.text {
+    margin: 32px 0;
+    font-weight: normal;
+  }
+
+  &__description-body {
+    color: $gray-lighter;
+  }
+}
