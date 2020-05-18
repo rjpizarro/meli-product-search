@@ -4,7 +4,7 @@ import ItemDetails from '../item-details';
 import useMakeRequest from '../../../libs/make-request'
 
 jest.mock('../../../config/envConfig', () => () => ({ apiUrl: 'http://localhost:8000/api' }))
-
+jest.mock('../../../components/spinner', () => () => <div data-testid="spinner" />)
 jest.mock('react-router', () => ({
     useParams: () => ({ id: 'MOCK-ID'}),
 }));
