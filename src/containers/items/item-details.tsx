@@ -9,6 +9,7 @@ import endpoints from '../../config/endpoints'
 // COMPONENTS
 import ItemPageDetails from './components/item-page-details'
 import Spinner from '../../components/spinner'
+import {Helmet} from 'react-helmet'
 
 const ItemDetails = () => {
     const { id } = useParams()
@@ -25,7 +26,12 @@ const ItemDetails = () => {
 
     if (item) {
         return (
-            <ItemPageDetails {...item} />
+            <>
+                <Helmet>
+                    <title>{get(item, 'title', 'Detalle de producto')}</title>
+                </Helmet>
+                <ItemPageDetails {...item} />
+            </>
         )
     }
 

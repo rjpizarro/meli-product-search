@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom'
+import { Helmet } from 'react-helmet';
 
 // COMPONENTS
 import Header from './components/header/header'
@@ -27,12 +28,19 @@ function App() {
 
     return (
         <div className="App">
+            <Helmet
+                titleTemplate="%s - Mercado Libre"
+                defaultTitle="Mercado Libre - Democratizando el comercio"
+            >
+                <html lang="es-AR" />
+                <meta charSet="utf-8" />
+                <meta name="description" content="La comunidad de compra y venta online más grande de América Latina." />
+            </Helmet>
             <Header>
                 <Input
                     label="Nunca dejes de buscar"
                     endAdornment={ <SearchIcon /> }
                     onChange={(evt) => {
-                        console.log(">>app", evt.target.value)
                         setSearchValue(evt.target.value)
                     }}
                 />

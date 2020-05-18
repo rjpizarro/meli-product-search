@@ -10,6 +10,7 @@ import endpoints from '../../config/endpoints'
 import ItemResultsList from '../../components/item-results-list'
 import Page from '../../components/page'
 import Spinner from '../../components/spinner'
+import {Helmet} from 'react-helmet'
 
 function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -37,6 +38,9 @@ const ItemSearch = () => {
 
     return (
         <Page>
+            <Helmet>
+                <title>Resultados de búsqueda para {searchValue}</title>
+            </Helmet>
             <ItemResultsList results={items} onItemClick={(id) => history.push(`items/${id}`)} />
         </Page>
     )
