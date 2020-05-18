@@ -1,0 +1,40 @@
+.error-message {
+  background-color: #e22227;
+  color: #FFF;
+  border-radius: 1px;
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 25px auto;
+  text-align: left;
+
+  &__close-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: #FFF;
+    font-weight: bold;
+    border: 3px solid #FFF;
+    border-radius: 50%;
+    padding: 2px 4px;
+    font-size: 12px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  &__message {
+    font-size: 15px;
+  }
+
+  &__code {
+    text-align: right;
+    font-weight: lighter;
+    font-size: 12px
+  }
+}

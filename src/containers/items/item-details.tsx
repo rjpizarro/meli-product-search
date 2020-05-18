@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import get from 'lodash/get'
 import { useParams } from 'react-router'
 
@@ -10,13 +10,25 @@ import endpoints from '../../config/endpoints'
 import ItemPageDetails from './components/item-page-details'
 import Spinner from '../../components/spinner'
 import {Helmet} from 'react-helmet'
+import {useErrorContext} from '../../providers/error-provider'
 
 const ItemDetails = () => {
     const { id } = useParams()
-    const { data, isLoading } = useMakeRequest(
+    const { data, isLoading, error } = useMakeRequest(
         `${endpoints.items.get}/${id}`,
         'get',
     )
+    const [, dispatchError] = useErrorContext()
+
+    useEffect(() => {
+        if (error) {
+            dispatchError({
+                type: 'add-error',
+                message: get(error, 'message', ''),
+                code: get(error, 'code', ''),
+            })
+        }
+    }, [error])
 
     const item = get(data, 'item')
 

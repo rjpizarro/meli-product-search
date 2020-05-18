@@ -11,6 +11,7 @@ import ItemResultsList from '../../components/item-results-list'
 import Page from '../../components/page'
 import Spinner from '../../components/spinner'
 import {Helmet} from 'react-helmet'
+import {useErrorContext} from '../../providers/error-provider'
 
 function useQuery() {
     return new URLSearchParams(useLocation().search);
@@ -25,9 +26,19 @@ const ItemSearch = () => {
         'get',
         { lazy: true }
     )
+    const [, dispatchError] = useErrorContext()
 
     useEffect(() => {
-        search()
+        dispatchError({type: 'clean-all-errors'})
+        search(undefined, {
+            onError: (error) => {
+                dispatchError({
+                    type: 'add-error',
+                    message: get(error, 'message', ''),
+                    code: get(error, 'code', ''),
+                })
+            }
+        })
     }, [searchValue])
 
     const items = get(data, 'items', [])

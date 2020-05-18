@@ -8,6 +8,7 @@ import Input from './components/input'
 import { SearchIcon } from './components/icons'
 import ItemsContainer from './containers/items'
 import BaseButton from './components/base-button'
+import { ErrorProvider } from './providers/error-provider'
 
 function App() {
     const [searchValue, setSearchValue] = useState('')
@@ -62,9 +63,11 @@ function App() {
                     }}
                 />
             </Header>
-            <Switch>
-                <Route path="/items" component={ItemsContainer} />
-            </Switch>
+            <ErrorProvider>
+                <Switch>
+                    <Route path="/items" component={ItemsContainer} />
+                </Switch>
+            </ErrorProvider>
         </div>
     );
 }
