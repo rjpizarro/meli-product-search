@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShippingIcon should render correctly  1`] = `
+<img
+  alt="Search Icon"
+  sizes=" (max-width: 480px) 18px, 18px, "
+  src="ic_shipping@2x.png"
+  srcSet="ic_shipping@2x.png 36w,
+                ic_shipping.png 18w"
+/>
+`;

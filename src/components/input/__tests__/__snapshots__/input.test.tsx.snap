@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should add a component as adornment 1`] = `
+<div
+  className="input"
+>
+  <input
+    aria-label="Input label"
+    className="input__input-element"
+    placeholder="Input label"
+  />
+</div>
+`;
+
+exports[`Input should render correctly  1`] = `
+<div
+  className="input"
+>
+  <input
+    aria-label="Input label"
+    className="input__input-element"
+    placeholder="Input label"
+  />
+</div>
+`;

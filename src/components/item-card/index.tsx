@@ -8,7 +8,6 @@ export type ItemCardProps = {
     title: string
     free_shipping: boolean
     location: string
-    onCardClick?: () => void
     price: {
         amount: number,
         decimals?: number

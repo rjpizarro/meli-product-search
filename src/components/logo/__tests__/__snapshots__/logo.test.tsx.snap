@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo should render correctly  1`] = `
+<img
+  alt="Mercado Libre"
+  sizes=" (max-width: 480px) 53px, 60px, "
+  src="logo_ml@2x.png"
+  srcSet="logo_ml@2x.png 106w,
+                logo_ml.png 53w"
+/>
+`;

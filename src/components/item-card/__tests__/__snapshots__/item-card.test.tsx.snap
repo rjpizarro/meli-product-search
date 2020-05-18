@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemCard should render a icon when free_shipping prop is true 1`] = `
+<div
+  className="item-card"
+>
+  <div
+    className="item-card__picture-container"
+  >
+    <img
+      alt="Test item 1"
+      className="item-card__picture"
+      src="test picture 1"
+    />
+  </div>
+  <div
+    className="item-card__details-container"
+  >
+    <div
+      className="item-card__price-details"
+    >
+      <div
+        data-testid="price-label"
+      />
+      <span
+        className="item-card__shipping-icon"
+      >
+        <div
+          data-testid="shipping-icon"
+        />
+      </span>
+    </div>
+    <h2
+      className="item-card__title"
+    >
+      Test item 1
+    </h2>
+  </div>
+  <div
+    className="item-card__location-container"
+  >
+    <span
+      className="item-card__location"
+    />
+  </div>
+</div>
+`;
+
+exports[`ItemCard should render correctly  1`] = `
+<div
+  className="item-card"
+>
+  <div
+    className="item-card__picture-container"
+  >
+    <img
+      alt="Test item 1"
+      className="item-card__picture"
+      src="test picture 1"
+    />
+  </div>
+  <div
+    className="item-card__details-container"
+  >
+    <div
+      className="item-card__price-details"
+    >
+      <div
+        data-testid="price-label"
+      />
+    </div>
+    <h2
+      className="item-card__title"
+    >
+      Test item 1
+    </h2>
+  </div>
+  <div
+    className="item-card__location-container"
+  >
+    <span
+      className="item-card__location"
+    />
+  </div>
+</div>
+`;

@@ -32,7 +32,7 @@ const PriceLabel = (props: IPriceLabel) => {
             $ {formattedPrice}
             {
                 showDecimals &&
-                <span style={{fontSize: fontSize / 2 }} className="price-label__decimals">
+                <span style={{fontSize: fontSize / 2 }} className="price-label__decimals" data-testid="decimals">
                     { getDecimalsLabel(String(props.decimals)) }
                 </span>
             }

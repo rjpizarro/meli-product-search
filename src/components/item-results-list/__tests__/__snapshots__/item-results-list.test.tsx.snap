@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemResultsList should render a list of item-card  1`] = `
+<ul
+  className="item-results-list"
+>
+  <li
+    className="item-results-list__card"
+  >
+    <button
+      className="item-results-list__button"
+      data-testid="button"
+      onClick={[Function]}
+    >
+      <div
+        data-testid="item-card"
+      />
+    </button>
+  </li>
+  <li
+    className="item-results-list__card"
+  >
+    <button
+      className="item-results-list__button"
+      data-testid="button"
+      onClick={[Function]}
+    >
+      <div
+        data-testid="item-card"
+      />
+    </button>
+  </li>
+  <li
+    className="item-results-list__card"
+  >
+    <button
+      className="item-results-list__button"
+      data-testid="button"
+      onClick={[Function]}
+    >
+      <div
+        data-testid="item-card"
+      />
+    </button>
+  </li>
+  <li
+    className="item-results-list__card"
+  >
+    <button
+      className="item-results-list__button"
+      data-testid="button"
+      onClick={[Function]}
+    >
+      <div
+        data-testid="item-card"
+      />
+    </button>
+  </li>
+</ul>
+`;

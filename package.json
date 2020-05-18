@@ -46,6 +46,8 @@
     "@types/lodash": "^4.14.150",
     "@types/react-helmet": "^6.0.0",
     "@types/react-router-dom": "^5.1.5",
-    "node-sass": "^4.14.1"
+    "@types/react-test-renderer": "^16.9.2",
+    "node-sass": "^4.14.1",
+    "react-test-renderer": "^16.13.1"
   }
 }

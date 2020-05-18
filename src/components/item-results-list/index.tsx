@@ -18,7 +18,7 @@ const ItemResultsList = (props: IItemResultsList) => {
             {
                 props.results.map(({id, ...itemProps}) => (
                     <li key={id} className="item-results-list__card">
-                        <button className="item-results-list__button" onClick={() => props.onItemClick(id)}>
+                        <button className="item-results-list__button" onClick={() => props.onItemClick(id)} data-testid="button">
                             <ItemCard {...itemProps} />
                         </button>
                     </li>

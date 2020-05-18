@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render correctly  1`] = `
+<header
+  className="header"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row center-xs"
+    >
+      <div
+        className="col-xs-1 header__logo"
+      >
+        <button
+          data-testid="base-button"
+          onClick={[Function]}
+        />
+      </div>
+      <div
+        className="col-xs-9"
+      >
+        <div>
+          children
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+`;

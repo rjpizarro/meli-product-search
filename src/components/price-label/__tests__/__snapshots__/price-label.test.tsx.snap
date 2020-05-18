@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PriceLabel should render correctly with required props 1`] = `
+<span
+  className="price-label"
+  style={
+    Object {
+      "fontSize": 24,
+    }
+  }
+>
+  $ 
+  100
+</span>
+`;

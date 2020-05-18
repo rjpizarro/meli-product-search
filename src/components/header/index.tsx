@@ -9,7 +9,7 @@ interface IHeaderProps {
     onLogoClick: () => void
 }
 
-const Header = (props: IHeaderProps) => {
+const Index = (props: IHeaderProps) => {
     return (
         <header className="header">
             <Grid>
@@ -28,4 +28,4 @@ const Header = (props: IHeaderProps) => {
     )
 }
 
-export default Header
+export default Index

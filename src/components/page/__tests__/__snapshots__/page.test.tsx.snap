@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page should render correctly  1`] = `
+<main>
+  <div
+    className="page container"
+  >
+    <div
+      className="row center-xs"
+    >
+      <div
+        className="col-xs-10 page__content"
+      >
+        <p>
+          child
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+`;

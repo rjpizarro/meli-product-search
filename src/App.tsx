@@ -3,7 +3,7 @@ import { Switch, Route, useHistory } from 'react-router-dom'
 import { Helmet } from 'react-helmet';
 
 // COMPONENTS
-import Header from './components/header/header'
+import Index from './components/header'
 import Input from './components/input'
 import { SearchIcon } from './components/icons'
 import ItemsContainer from './containers/items'
@@ -43,7 +43,7 @@ function App() {
                 <meta charSet="utf-8" />
                 <meta name="description" content="La comunidad de compra y venta online más grande de América Latina." />
             </Helmet>
-            <Header onLogoClick={() => {
+            <Index onLogoClick={() => {
                 if (history.location.pathname !== '/') {
                     setSearchValue("")
                     history.push('/')
@@ -61,7 +61,7 @@ function App() {
                         setSearchValue(evt.target.value)
                     }}
                 />
-            </Header>
+            </Index>
             <Switch>
                 <Route path="/items" component={ItemsContainer} />
             </Switch>
