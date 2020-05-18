@@ -21,7 +21,7 @@ const ItemDetails = () => {
     const item = get(data, 'item')
 
     if (isLoading) {
-        return <Spinner />
+        return <Spinner data-testid="spinner" />
     }
 
     if (item) {
