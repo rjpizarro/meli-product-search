@@ -7,6 +7,7 @@ import Header from './components/header/header'
 import Input from './components/input'
 import { SearchIcon } from './components/icons'
 import ItemsContainer from './containers/items'
+import BaseButton from './components/base-button'
 
 function App() {
     const [searchValue, setSearchValue] = useState('')
@@ -22,6 +23,12 @@ function App() {
 
     const onKeyPress = (evt: KeyboardEvent) => {
         if (evt.key === 'Enter' && searchValue) {
+            search()
+        }
+    }
+
+    const search = () => {
+        if (searchValue) {
             history.push(`/items?search=${searchValue}`)
         }
     }
@@ -36,10 +43,20 @@ function App() {
                 <meta charSet="utf-8" />
                 <meta name="description" content="La comunidad de compra y venta online más grande de América Latina." />
             </Helmet>
-            <Header>
+            <Header onLogoClick={() => {
+                if (history.location.pathname !== '/') {
+                    setSearchValue("")
+                    history.push('/')
+                }
+            }}>
                 <Input
                     label="Nunca dejes de buscar"
-                    endAdornment={ <SearchIcon /> }
+                    endAdornment={
+                        <BaseButton onClick={search}>
+                            <SearchIcon />
+                        </BaseButton>
+                    }
+                    value={searchValue}
                     onChange={(evt) => {
                         setSearchValue(evt.target.value)
                     }}
