@@ -42,11 +42,21 @@
     margin-top: 32px;
     font-size: 18px;
     font-weight: normal;
-    max-width: 60%;
+    max-width: 70%;
     text-align: left;
   }
 
   &__location {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .item-card {
+    flex-direction: column;
+
+    &__title {
+      max-width: 100%;
+    }
   }
 }

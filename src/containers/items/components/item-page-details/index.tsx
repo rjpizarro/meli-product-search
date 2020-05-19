@@ -29,14 +29,14 @@ const ItemPageDetails = (props: IItemPageDetails) => {
     return (
         <Page className="item-page-details">
             <Row className="item-page-details__resume-container">
-                <Col xs={8}>
+                <Col xs={12} lg={8}>
                     <img
                         className="item-page-details__picture"
                         src={props.picture}
                         alt={props.title}
                     />
                 </Col>
-                <Col xs={4} className="item-page-details__resume">
+                <Col xs={12} lg={4} className="item-page-details__resume">
                     <Text size={14}>
                         {conditionLabel[props.condition]} - {props.sold_quantity} vendidos
                     </Text>
@@ -57,7 +57,7 @@ const ItemPageDetails = (props: IItemPageDetails) => {
             {
                 props.description &&
                 <Row className="item-page-details__description-container">
-                    <Col xs={8}>
+                    <Col xs={12} lg={8}>
                         <Text className="item-page-details__description-title" component="h3" size={28}>
                             Descripción del Producto
                         </Text>

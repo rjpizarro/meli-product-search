@@ -14,12 +14,12 @@ const Index = (props: IHeaderProps) => {
         <header className="header">
             <Grid>
                 <Row center="xs">
-                    <Col xs={1} className="header__logo">
+                    <Col xs={3} md={1} className="header__logo">
                         <BaseButton onClick={props.onLogoClick}>
                             <Logo />
                         </BaseButton>
                     </Col>
-                    <Col xs={9}>
+                    <Col xs={10} md={9}>
                         {props.children}
                     </Col>
                 </Row>

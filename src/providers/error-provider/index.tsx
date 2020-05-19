@@ -26,8 +26,8 @@ type ErrorAction = addErrorAction | cleanErrorAction | cleanAllErrorsAction
 type ErrorDispatch = (action: ErrorAction) => void
 type ErrorState = ErrorType[]
 
-const ErrorStateContext = createContext<ErrorState | undefined>(undefined)
-const ErrorDispatchContext = createContext<ErrorDispatch | undefined>(undefined)
+const ErrorStateContext = createContext<ErrorState>([])
+const ErrorDispatchContext = createContext<ErrorDispatch>(() => {})
 
 const defaultState: ErrorState = []
 
@@ -85,10 +85,6 @@ const ErrorProvider = ({ children }: {children: React.ReactChildren | React.Reac
 const useErrorContext = (): [ErrorState, ErrorDispatch] => {
     const stateContext = useContext(ErrorStateContext)
     const dispatchContext = useContext(ErrorDispatchContext)
-
-    if (stateContext === undefined || dispatchContext === undefined) {
-        throw new Error('useAuthContext need to be wrapped in a AuthProvider')
-    }
 
     return [stateContext, dispatchContext]
 }

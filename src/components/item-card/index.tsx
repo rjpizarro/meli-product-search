@@ -2,6 +2,7 @@ import React from 'react'
 import { ShippingIcon } from '../icons'
 import PriceLabel from '../price-label'
 import './style.scss'
+import Text from '../text'
 
 export type ItemCardProps = {
     picture: string
