@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Install & Run
 
-1. Clone the project: `git clone git@github.com:rjpizarro/meli-search-product.git`
+1. Clone the project: `git clone git@github.com:rjpizarro/meli-product-search.git`
 2. Install dependencies: `npm install`
 3. Run: `npm start`
 
