@@ -1,6 +1,69 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Meli Product Search
+
+* App: https://meli-product-search.now.sh/
+
+## Install & Run
+
+1. Clone the project: `git clone git@github.com:rjpizarro/meli-search-product.git`
+2. Install dependencies: `npm install`
+3. Run: `npm start`
+
+You will need the API running in order run correctly this App. You could find the API on: https://github.com/rjpizarro/meli-search-API
+
+## Project Structure
+
+```
+meli-product-search
+├── package.json
+├── tsconfig.json
+├── public
+├── node_modules
+└── src
+    ├── App.tsx
+    ├── globals.scss
+    ├── index.scss
+    ├── index.tsx
+    ├── components
+    │   └── ...
+    ├── containers
+    │   └── items
+    │       └── ...
+    ├── libs
+    │   └── make-request
+    ├── config
+    └── providers
+        └── error-provider
+
+```
+
+At the project root level you will find all the config files for typescript along with the package.json file. 
+  
+Folders like `public` and `node_modules` are generated after build or when installing a dependency, respectively
+
+Inside `src` folder you will find:
+
+### `index.tsx`
+
+Main entry file. Contains the root of the React tree and some providers config (ex: Router).   
+
+### `App.tsx`
+
+App Component. Defines the routes and assigns a container to each one.  
+
+### `globals.scss`
+
+Define globals SASS variables colors to use in the rest of the styles files.
+
+### `folders`
+
+* **components**: Presentational components. Basic components used to build views.  
+* **containers**: Controllers components. Organized per feature. Connected to routes to create the views. Contains the business logic and performs the fetch data actions.   
+* **libs**: Generic project libraries and tools.
+* **providers**: Custom context store to handle specific app tasks (ex: Error Handling)      
+
+## Scripts
 
 In the project directory, you can run:
 
